@@ -22,3 +22,5 @@ const Image = ({src, alt, className, w, h}) => {
 }
 
 export default Image
+
+//This Image component is only for assets used from image kit. Not for local or any other sources.
