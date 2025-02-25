@@ -40,16 +40,16 @@ const FeaturedPosts = () => {
 
         <div className='flex justify-between gap-4 w-full lg:h-1/3'>
           <div className='w-1/3 aspect-video'>
-            <Image src='featured2.jpeg' className='w-full h-full rounded-3xl object-cover' w='298' />
+            {posts[1].img && <Image src={posts[1].img} className='w-full h-full rounded-3xl object-cover' w='298' />}
           </div>
 
           <div className='w-2/3'>
             <div className='flex items-center gap-4 text-sm lg:text-base mb-4'>
               <h1 className='font-semibold lg:text-lg'>02.</h1>
-              <Link to='web-design' className='text-myblue lg:text-lg'>Web design</Link>
-              <span className='text-gray-500'>3 days ago</span>
+              <Link to='web-design' className='text-myblue lg:text-lg'>{posts[1].category}</Link>
+              <span className='text-gray-500'>{format(posts[1].createdAt)}</span>
             </div>
-            <Link to='test' className='text-base sm:text-lg md:text-2xl font-medium'>Post title shows here</Link>
+            <Link to='test' className='text-base sm:text-lg md:text-2xl font-medium'>{posts[1].title}</Link>
           </div>
         </div>
 
